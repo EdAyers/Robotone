@@ -1,0 +1,28 @@
+name: robotone
+version: 0.0.1
+cabal-version: >=1.2
+build-type: Simple
+license: AllRightsReserved
+license-file: ""
+description:  
+data-dir: ""
+ 
+executable robotone
+    build-depends: QuickCheck -any, base -any, containers -any,
+                   logict -any, mtl -any, parsec -any, transformers -any
+    main-is: Main.hs
+    buildable: True
+    hs-source-dirs: src
+    other-modules: Writeup Types TidyingMoves TexBase Tex TestData TestData2
+                   Suspension RobotM Rename Printing Parser Move Match Library
+                   Expansion DeletionMoves ApplyingMoves
+    ghc-options: -fwarn-unused-binds
+ 
+test-suite test-robotone
+    build-depends: QuickCheck -any, base -any, containers -any,
+                   logict -any, mtl -any, parsec -any, transformers -any
+    type: exitcode-stdio-1.0
+    main-is: Main.hs
+    buildable: True
+    cpp-options: -DMAIN_FUNCTION=testMain
+    hs-source-dirs: src

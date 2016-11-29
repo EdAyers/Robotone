@@ -1,0 +1,93 @@
+1. Expand pre-universal target T1.
+2. Peel and split universal-conditional target T2.
+3. Elementary expansion of hypothesis H3.
+4. Forwards reasoning using H1 with H4.
+5. Deleted H4, as this unexpandable atomic statement is unmatchable.
+6. Deleted H1, as the conclusion of this implicative statement is unmatchable.
+7. Forwards reasoning using H2 with H5.
+8. Deleted H5, as this unexpandable atomic statement is unmatchable.
+9. Deleted H2, as the conclusion of this implicative statement is unmatchable.
+10. Unlock existential-universal-conditional target T3.
+11. Elementary expansion of target T4.
+12. Backwards reasoning using H6 with T5.
+13. Delete H6 as it contans a dangling variable $A$.
+14. Backwards reasoning using H7 with T6.
+15. Delete H7 as it contans a dangling variable $B$.
+16. Replacing diamonds with bullets in L2$^\blacklozenge$.
+17. Backwards reasoning using library result ``transitivity'' with (T7,H8).
+18. Moved H8 down, as $x$ can only be utilised by T8.
+19. Backwards reasoning using library result ``transitivity'' with (T8,H8).
+20. Delete H8 as it contans a dangling variable $x$.
+21. Collapsed subtableau L3 as it has no undeleted hypotheses.
+22. Taking $\delta^\bullet [\overline{y}] = \min(\delta'[x],\delta''[x])$ matches all targets against a library solution, so L2 is done.
+23. All targets of L1 are `Done', so L1 is itself done.
+	23 moves made; problem solved.
+1. Expand pre-universal target T1.
+2. Peel and split universal-conditional target T2.
+3. Elementary expansion of hypothesis H3.
+4. Forwards reasoning using H2 with H4.
+5. Deleted H4, as this unexpandable atomic statement is unmatchable.
+6. Deleted H2, as the conclusion of this implicative statement is unmatchable.
+7. Unlock existential-universal-conditional target T3.
+8. Elementary expansion of target T4.
+9. Backwards reasoning using H5 with T5.
+10. Delete H5 as it contans a dangling variable $U$.
+11. Backwards reasoning using H1 with T6.
+12. Delete H1 as it contans a dangling variable $f$.
+13. Hypothesis H6 matches target T7 after choosing $\delta^\blacklozenge [\overline{y}] = \delta''[x,\delta'[f(x)]]$, so L2$^\blacklozenge$ is done.
+14. All targets of L1 are `Done', so L1 is itself done.
+	14 moves made; problem solved.
+1. Expand pre-universal target T1.
+2. Peel bare universal target T2.
+3. Unlock existential-universal-conditional target T3.
+4. Backwards reasoning using H2 with T4.
+5. Delete H2 as it contans a dangling variable $g$.
+6. Backwards reasoning using H1 with T5.
+7. Delete H1 as it contans a dangling variable $f$.
+8. Hypothesis H3 matches target T6 after choosing $\delta^\blacklozenge [\overline{y}] = \delta''[x,\delta'[f(x),\epsilon]]$, so L2$^\blacklozenge$ is done.
+9. All targets of L1 are `Done', so L1 is itself done.
+	9 moves made; problem solved.
+1. Expand pre-universal target T1.
+2. Peel bare universal target T2.
+3. Unlock existential-universal-conditional target T3.
+4. Backwards reasoning using H1 with T4.
+5. Delete H1 as it contans a dangling variable $f$.
+6. Backwards reasoning using H2 with T5.
+7. Delete H2 as it contans a dangling variable $a$.
+8. Hypothesis H3 matches target T6 after choosing $N^\blacklozenge [\overline{n}] = N'[\delta[a,\epsilon]]$, so L2$^\blacklozenge$ is done.
+9. All targets of L1 are `Done', so L1 is itself done.
+	9 moves made; problem solved.
+1. Expand pre-universal target T1.
+2. Peel and split universal-conditional target T2.
+3. Forwards reasoning using H1 with H3.
+4. Deleted H3, as this unexpandable atomic statement is unmatchable.
+5. Deleted H1, as the premise of this implicative statement is unmatchable.
+6. Expand pre-existential hypothesis H5.
+7. Forwards reasoning using library result ``a closed set contains its limit points'' with (H2,H4,H6).
+8. Delete H2 as it contans a dangling variable $X$.
+9. All conjuncts of T3 (after expansion) can be simultaneously matched against H7 and H6 or rendered trivial by choosing $a' = a$, so L1 is done.
+	9 moves made; problem solved.
+1. Expand pre-universal target T1.
+2. Peel and split universal-conditional target T2.
+3. Expand pre-existential hypothesis H1.
+4. Elementary expansion of hypothesis H2.
+5. Rewrite $x$ as $f(y)$ throughout the tableau using hypothesis H3.
+6. Hypothesis H4 matches target T3, so L1 is done.
+	6 moves made; problem solved.
+1. Expand pre-universal target T1.
+2. Peel and split universal-conditional target T2.
+3. Elementary expansion of target T3.
+4. All conjuncts of T4 (after expansion) can be simultaneously matched against H1 or rendered trivial by choosing $y = x$, so L1 is done.
+	4 moves made; problem solved.
+1. Expand pre-universal target T1.
+2. Peel and split universal-conditional target T2.
+3. Elementary expansion of hypothesis H2.
+4. Expand pre-existential hypothesis H3.
+5. Expand pre-existential hypothesis H4.
+6. Forwards reasoning using H1 with (H6,H8).
+7. Expand pre-existential target T3.
+8. Unlock existential target T4.
+9. Elementary expansion of target T5.
+10. Rewrite $x$ as $f(y)$ throughout the tableau using hypothesis H6.
+11. Rewrite $y$ as $y'$ throughout the tableau using hypothesis H9.
+	11 moves made.
