@@ -8,7 +8,7 @@ import Prelude hiding (repeat, (/))
 import Control.Applicative
 import Data.Functor.Identity
 import Control.Monad
-import Control.Monad.Writer.Lazy (Writer, tell, runWriter)
+import Control.Monad.Writer.Lazy (Writer, tell, runWriter, writer)
 import Data.Monoid
 import Data.List
 import Debug.Trace
@@ -201,7 +201,8 @@ mapFormulaM fn (Not f) = fn . Not =<< mapFormulaM fn f
 mapFormulaM fn (And fs) = fn . And =<< mapM (mapFormulaM fn) fs
 mapFormulaM fn (Or fs) = fn . Or =<< mapM (mapFormulaM fn) fs
 mapFormulaM fn (Forall vs f) = fn . Forall vs =<< mapFormulaM fn f
-mapFormulaM fn (UniversalImplies vs fs f') = fn =<< UniversalImplies vs `liftM` mapM (mapFormulaM fn) fs `ap` mapFormulaM fn f'
+mapFormulaM fn (UniversalImplies vs fs f') = 
+    fn =<< UniversalImplies vs `liftM` mapM (mapFormulaM fn) fs `ap` mapFormulaM fn f'
 mapFormulaM fn (Exists vs f) = fn . Exists vs =<< mapFormulaM fn f
 
 mapDirectVariableInFormulaM :: Monad m => (Variable -> m Variable) -> Formula -> m Formula
@@ -312,9 +313,7 @@ mapFormulaInTableau = nonmonadic mapFormulaInTableauM
 ----------------------------------------------------------------------------------------------------
 
 accumulate :: forall w. forall a. forall b. (Monoid w) => ((a -> Writer w a) -> b-> Writer w b) -> (a -> w) -> b -> w
-accumulate mm f = snd . runWriter . mm write
-  where write :: a -> Writer w a
-        write = liftM2 (>>) (tell . f) return
+accumulate mm f = snd . runWriter . mm (\a -> writer (a, f a))
 
 accumulateVariable = accumulate mapVariableM
 accumulateTerm = accumulate mapTermM
