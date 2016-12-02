@@ -18,6 +18,7 @@ import Prelude hiding ((/))
 import qualified Data.Map as Map
 import Data.Maybe
 import Data.Map (Map)
+import Data.Monoid
 import Control.Applicative
 import Control.Monad
 import Control.Monad.Trans
@@ -171,9 +172,10 @@ extractEquations (Exists vs f) (Exists v's f') = do
 extractEquations _ _ = Nothing
 
 
---TODO: rewrite occursIn using the Any monoid
 occursIn :: Variable -> Term -> Bool
-occursIn v = or . accumulateVariableInTerm (return . (== v))
+occursIn v term = getAny t
+  where t :: Any
+        t = accumulateVariableInTerm (Any . (== v)) (term)
 
 --we don't want the matching algorithm to recurse into dependencies, so we will simply strip them out
 removeDependencies :: Variable -> Variable
