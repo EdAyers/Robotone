@@ -10,7 +10,6 @@ import Control.Applicative hiding (many, (<|>))
 import qualified Data.Map as Map
 import Data.Map (Map, (!))
 
---import Text.Parsec.Text.Lazy
 import Text.Parsec.String
 import Text.Parsec.Char
 import Text.Parsec.Combinator

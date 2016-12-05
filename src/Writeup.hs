@@ -5,18 +5,9 @@ module Writeup
 
 
 import Control.Applicative
---import Control.Arrow
-----import Control.Monad.RWS hiding (msum)
---import Control.Monad.Logic hiding (msum)
---import Control.Monad.Trans.List
---import Control.Monad.Trans.State.Lazy
---import Control.Monad.Identity hiding (msum)
 import Control.Monad
---import Data.Either
 import Data.List
 import Data.Maybe
---import Data.Map hiding (map, filter, null)
---import Data.Foldable (msum)
 import Data.Char
 import Data.Map (Map, (!))
 import qualified Data.Map as Map
@@ -42,7 +33,7 @@ commaList [s] = s
 commaList ss = intercalate "," ss
 
 andList :: [String] -> String
-andList [] = "EMPTYANDLIST" -- error "andList called with empty list"
+andList [] = "EMPTYANDLIST" 
 andList [s] = s
 andList ss = intercalate ", " (init ss) ++ " and " ++ last ss
 
