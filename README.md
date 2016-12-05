@@ -1,3 +1,14 @@
+
+
+Fork of `robotone` to be found in https://github.com/mg262/research
+The work of Mohan Ganesalingham and Tim Gowers in their paper "A Fully Automatic Theorem Prover with Human-Style Output".
+
+As the original article states: This article is distributed under the terms of the Creative Commons Attribution 4.0 International License (http://creativecommons.org/licenses/by/4.0/), which permits unrestricted use, distribution, and reproduction in any medium, provided you give appropriate credit to the original author(s) and the source, provide a link to the Creative Commons license, and indicate if changes were made.
+
+Original `README.txt`
+-------------
+
+
 General note
 ------------
 
