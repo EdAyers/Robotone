@@ -1,28 +1,44 @@
-name: robotone
-version: 0.0.1
-cabal-version: >=1.2
-build-type: Simple
-license: AllRightsReserved
-license-file: ""
-description:  
-data-dir: ""
+name:                robotone
+version:             0.1.0.0
+synopsis:            Initial project template from stack
+description:         Please see README.md
+homepage:            https://github.com/githubuser/robotone#readme
+license:             BSD3
+license-file:        LICENSE
+author:              Author name here
+maintainer:          example@example.com
+copyright:           2016 Author name here
+category:            Web
+build-type:          Simple
+extra-source-files:  README.md
+cabal-version:       >=1.10
+
  
-executable robotone
-    build-depends: QuickCheck -any, base -any, containers -any,
-                   logict -any, mtl -any, parsec -any, transformers -any
-    main-is: Main.hs
-    buildable: True
-    hs-source-dirs: src
-    other-modules: Writeup Types TidyingMoves TexBase Tex TestData TestData2
-                   Suspension RobotM Rename Printing Parser Move Match Library
-                   Expansion DeletionMoves ApplyingMoves
-    ghc-options: -fwarn-unused-binds
+library
+  hs-source-dirs:      src
+  exposed-modules:     Writeup Types TidyingMoves TexBase Tex TestData TestData2
+                       Suspension RobotM Rename Printing Parser Move Match Library
+                       Expansion DeletionMoves ApplyingMoves
+  build-depends:       base >= 4.7 && < 5, containers, mtl, parsec, logict, QuickCheck, transformers
+  default-language:    Haskell2010
+
+
+-- executable robotone
+--     build-depends: QuickCheck -any, base -any, containers -any,
+--                    logict -any, mtl -any, parsec -any, transformers -any
+--     main-is: Main.hs
+--     buildable: True
+--     hs-source-dirs: src
+--     other-modules: Writeup Types TidyingMoves TexBase Tex TestData TestData2
+--                    Suspension RobotM Rename Printing Parser Move Match Library
+--                    Expansion DeletionMoves ApplyingMoves
+--     ghc-options: -fwarn-unused-binds
  
-test-suite test-robotone
-    build-depends: QuickCheck -any, base -any, containers -any,
-                   logict -any, mtl -any, parsec -any, transformers -any
-    type: exitcode-stdio-1.0
-    main-is: Main.hs
-    buildable: True
-    cpp-options: -DMAIN_FUNCTION=testMain
-    hs-source-dirs: src
+-- test-suite test-robotone
+--     build-depends: QuickCheck -any, base -any, containers -any,
+--                    logict -any, mtl -any, parsec -any, transformers -any
+--     type: exitcode-stdio-1.0
+--     main-is: Main.hs
+--     buildable: True
+--     cpp-options: -DMAIN_FUNCTION=testMain
+--     hs-source-dirs: src
