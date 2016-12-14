@@ -21,20 +21,6 @@ module TexBase (
 
 import qualified Data.Set as Set
 
---import GHC.Unicode (isAlphaNum, isDigit)
-
---import Common
-
-----------------------------------------------------------------------------------------------------
---
---class Tex a where
---    tex :: a -> String
-
---instance Tex Int where
---    tex = show
-
-----------------------------------------------------------------------------------------------------
-
 math :: String -> String
 math s = "$" ++ s ++ "$"
 

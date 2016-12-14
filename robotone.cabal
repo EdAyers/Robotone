@@ -23,7 +23,7 @@ library
   default-language:    Haskell2010
 
 
-executable robotone
+executable robotone-exe
     hs-source-dirs:     app
     main-is:            Main.hs
     build-depends:      base, robotone, containers, mtl, transformers, logict
