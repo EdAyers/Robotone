@@ -4,7 +4,7 @@ wd=$(dirname "$0")
 xelatex=$(which xelatex)
 if [$xelatex == ""]
 then
-   xelatex=$(which latex)
+   xelatex=$(which pdflatex)
 fi
 
 stack exec robotone-exe > "$wd/build/robotone.tex"

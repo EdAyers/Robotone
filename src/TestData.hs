@@ -19,6 +19,12 @@ import Library
 import Writeup
 import Printing
 
+unionOpenSets = Problem
+    "If $A$ and $B$ are open sets, then $A \\cup B$ is also open." --"The union of two open sets is open."
+   ["open(A)",
+    "open(B)"]
+    "open(union(A,B))"
+
 intersectionOpenSets = Problem
     "If $A$ and $B$ are open sets, then $A \\cap B$ is also open." --"The intersection of two open sets is open."
    ["open(A)",
@@ -64,7 +70,8 @@ intersectionSubgroupsClosed = Problem
         ["subgroup(H)","subgroup(K)"]
         "forall x y.(in(x,intersect(H,K)) & in(y,intersect(H,K)) => in(product(x,y),intersect(H,K)))"
 
-problems = [intersectionOpenSets,
+problems = [unionOpenSets,
+            intersectionOpenSets,
             continuousPreimageOpen,
             compositionContinuousFunctions,
             continuousFunctionsPreserveLimits,
@@ -221,4 +228,3 @@ library = Library [
  ]
  expansionTable
  rewriteTable
-

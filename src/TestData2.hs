@@ -103,15 +103,16 @@ problems = [union3OpenSets,
             unionClosedSets,
             intersectionClosedSets,
             continuousPreimageClosed]
-            
-problems' = [intersectionOpenSets,
-            continuousPreimageOpen,
-            compositionContinuousFunctions,
-            continuousFunctionsPreserveLimits,
-            closedSubsetCompleteIsComplete,
-            ffminusoneAsubsetA, asubsetfminusonefA,
-            iffInjectionThenfAcapfBsubsetfAcapB
-            ]
+
+problems' = [unionOpenSets,
+             intersectionOpenSets,
+             continuousPreimageOpen,
+             compositionContinuousFunctions,
+             continuousFunctionsPreserveLimits,
+             closedSubsetCompleteIsComplete,
+             ffminusoneAsubsetA, asubsetfminusonefA,
+             iffInjectionThenfAcapfBsubsetfAcapB
+             ]
 ----------------------------------------------------------------------------------------------------
 
 
@@ -264,4 +265,3 @@ library = Library [
  ]
  expansionTable
  rewriteTable
-
