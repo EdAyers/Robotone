@@ -16,7 +16,13 @@ cd Robotone
 stack build
 ```
 
-Then run `run.sh`, which effectively does this;
+Create a directory into which the build files will go:
+
+```
+mkdir build
+```
+
+Then run `run.sh build`, which effectively does this;
 
 ``` bash
 # generate a TeX file
@@ -28,3 +34,4 @@ xelatex "\input{robotone.tex}"
 xelatex "\def\showsteps{1} \input{robotone.tex}"
 ```
 
+Note, the TeX file requires the libertine.sty fonts, available in Debial from `texlive-fonts-extra`.
