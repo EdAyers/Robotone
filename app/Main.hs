@@ -13,7 +13,6 @@ import qualified Data.Map as Map
 import Data.Map (Map)
 import Data.List
 import Control.Monad.Logic
-import Control.Monad.Trans.List
 import Control.Monad.Trans.State.Lazy
 import Control.Monad.Identity hiding (msum)
 
